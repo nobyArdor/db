@@ -22,7 +22,7 @@
 // Package mongo wraps the gopkg.in/mgo.v2 MongoDB driver. See
 // https://upper.io/db.v3/mongo for documentation, particularities and usage
 // examples.
-package mongo // import "upper.io/db.v3/mongo"
+package mongo // import "github.com/upper/db/mongo"
 
 import (
 	"strings"
@@ -30,7 +30,7 @@ import (
 	"time"
 
 	"gopkg.in/mgo.v2"
-	"upper.io/db.v3"
+	"github.com/upper/db"
 )
 
 // Adapter holds the name of the mongodb adapter.

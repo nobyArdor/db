@@ -36,7 +36,7 @@
 //  import (
 //  	"log"
 //
-//  	"upper.io/db.v3/postgresql" // Imports the postgresql adapter.
+//  	"github.com/upper/db/postgresql" // Imports the postgresql adapter.
 //  )
 //
 //  var settings = postgresql.ConnectionURL{
@@ -74,4 +74,4 @@
 //
 // See more usage examples and documentation for users at
 // https://upper.io/db.v3.
-package db // import "upper.io/db.v3"
+package db // import "github.com/upper/db"
