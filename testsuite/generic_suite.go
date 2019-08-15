@@ -25,8 +25,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/suite"
+	db "github.com/upper/db"
 	"gopkg.in/mgo.v2/bson"
-	db "upper.io/db.v3"
 )
 
 type birthday struct {

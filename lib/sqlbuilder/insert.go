@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
-	"upper.io/db.v3/internal/immutable"
-	"upper.io/db.v3/internal/sqladapter/exql"
+	"github.com/upper/db/adapter/immutable"
+	"github.com/upper/db/adapter/sqladapter/exql"
 )
 
 type inserterQuery struct {

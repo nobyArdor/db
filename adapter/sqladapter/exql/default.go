@@ -1,8 +1,7 @@
-package sqlbuilder
+package exql
 
 import (
 	"github.com/upper/db/adapter/cache"
-	"github.com/upper/db/adapter/sqladapter/exql"
 )
 
 const (
@@ -69,7 +68,7 @@ const (
         DISTINCT
       {{end}}
 
-      {{if defined .Columns}}
+      {{if .Columns}}
         {{.Columns | compile}}
       {{else}}
         *
@@ -83,9 +82,7 @@ const (
 
       {{.Where | compile}}
 
-      {{if defined .GroupBy}}
-        {{.GroupBy | compile}}
-      {{end}}
+      {{.GroupBy | compile}}
 
       {{.OrderBy | compile}}
 
@@ -101,6 +98,12 @@ const (
     DELETE
       FROM {{.Table | compile}}
       {{.Where | compile}}
+    {{if .Limit}}
+      LIMIT {{.Limit}}
+    {{end}}
+    {{if .Offset}}
+      OFFSET {{.Offset}}
+    {{end}}
   `
 	defaultUpdateLayout = `
     UPDATE
@@ -116,7 +119,7 @@ const (
       {{.Where | compile}}
 
       {{if .Limit}}
-        LIMIT {{.Limit}}
+        LIMIT {{.Limit | compile}}
       {{end}}
 
       {{if .Offset}}
@@ -126,14 +129,10 @@ const (
 
 	defaultInsertLayout = `
     INSERT INTO {{.Table | compile}}
-      {{if defined .Columns }}({{.Columns | compile}}){{end}}
+      {{if .Columns }}({{.Columns | compile}}){{end}}
     VALUES
-    {{if defined .Values}}
       {{.Values | compile}}
-    {{else}}
-      (default)
-    {{end}}
-    {{if defined .Returning}}
+    {{if .Returning}}
       RETURNING {{.Returning | compile}}
     {{end}}
   `
@@ -159,36 +158,37 @@ const (
   `
 )
 
-var testTemplate = exql.Template{
-	ColumnSeparator:     defaultColumnSeparator,
-	IdentifierSeparator: defaultIdentifierSeparator,
-	IdentifierQuote:     defaultIdentifierQuote,
-	ValueSeparator:      defaultValueSeparator,
-	ValueQuote:          defaultValueQuote,
+var defaultTemplate = &Template{
 	AndKeyword:          defaultAndKeyword,
-	OrKeyword:           defaultOrKeyword,
-	DescKeyword:         defaultDescKeyword,
 	AscKeyword:          defaultAscKeyword,
 	AssignmentOperator:  defaultAssignmentOperator,
 	ClauseGroup:         defaultClauseGroup,
 	ClauseOperator:      defaultClauseOperator,
-	ColumnValue:         defaultColumnValue,
-	TableAliasLayout:    defaultTableAliasLayout,
 	ColumnAliasLayout:   defaultColumnAliasLayout,
-	SortByColumnLayout:  defaultSortByColumnLayout,
-	WhereLayout:         defaultWhereLayout,
-	OnLayout:            defaultOnLayout,
-	UsingLayout:         defaultUsingLayout,
-	JoinLayout:          defaultJoinLayout,
-	OrderByLayout:       defaultOrderByLayout,
-	InsertLayout:        defaultInsertLayout,
-	SelectLayout:        defaultSelectLayout,
-	UpdateLayout:        defaultUpdateLayout,
+	ColumnSeparator:     defaultColumnSeparator,
+	ColumnValue:         defaultColumnValue,
+	CountLayout:         defaultCountLayout,
 	DeleteLayout:        defaultDeleteLayout,
-	TruncateLayout:      defaultTruncateLayout,
+	DescKeyword:         defaultDescKeyword,
 	DropDatabaseLayout:  defaultDropDatabaseLayout,
 	DropTableLayout:     defaultDropTableLayout,
-	CountLayout:         defaultCountLayout,
 	GroupByLayout:       defaultGroupByLayout,
-	Cache:               cache.NewCache(),
+	IdentifierQuote:     defaultIdentifierQuote,
+	IdentifierSeparator: defaultIdentifierSeparator,
+	InsertLayout:        defaultInsertLayout,
+	JoinLayout:          defaultJoinLayout,
+	OnLayout:            defaultOnLayout,
+	OrKeyword:           defaultOrKeyword,
+	OrderByLayout:       defaultOrderByLayout,
+	SelectLayout:        defaultSelectLayout,
+	SortByColumnLayout:  defaultSortByColumnLayout,
+	TableAliasLayout:    defaultTableAliasLayout,
+	TruncateLayout:      defaultTruncateLayout,
+	UpdateLayout:        defaultUpdateLayout,
+	UsingLayout:         defaultUsingLayout,
+	ValueQuote:          defaultValueQuote,
+	ValueSeparator:      defaultValueSeparator,
+	WhereLayout:         defaultWhereLayout,
+
+	Cache: cache.NewCache(),
 }
