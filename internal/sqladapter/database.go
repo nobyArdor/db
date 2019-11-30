@@ -9,11 +9,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/cache"
-	"upper.io/db.v3/internal/sqladapter/compat"
-	"upper.io/db.v3/internal/sqladapter/exql"
-	"upper.io/db.v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/cache"
+	"github.com/arumata/db/v3/internal/sqladapter/compat"
+	"github.com/arumata/db/v3/internal/sqladapter/exql"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 var (

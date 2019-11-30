@@ -25,7 +25,7 @@ If you want to check your code for statatements that might rely on the old
 behaviour and could cause you trouble use `dbcheck`:
 
 ```
-go get -u github.com/upper/cmd/dbcheck
+go get -u github.com/arumata/cmd/dbcheck
 
 dbcheck github.com/my/package/...
 ```

@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
-	"upper.io/db.v3/internal/immutable"
-	"upper.io/db.v3/internal/sqladapter/exql"
+	"github.com/arumata/db/v3/internal/immutable"
+	"github.com/arumata/db/v3/internal/sqladapter/exql"
 )
 
 type deleterQuery struct {

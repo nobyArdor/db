@@ -27,9 +27,9 @@ import (
 
 	mgo "gopkg.in/mgo.v2"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/lib/sqlbuilder"
-	"upper.io/db.v3/testsuite"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3/testsuite"
 )
 
 var settings = ConnectionURL{

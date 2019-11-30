@@ -7,8 +7,8 @@ import (
 	"math"
 	"strings"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/immutable"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/immutable"
 )
 
 var (

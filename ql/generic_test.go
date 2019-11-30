@@ -25,7 +25,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	"upper.io/db.v3/testsuite"
+	"github.com/arumata/db/v3/testsuite"
 )
 
 type GenericTests struct {

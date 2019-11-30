@@ -25,9 +25,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/immutable"
-	"upper.io/db.v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/immutable"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 type Result struct {

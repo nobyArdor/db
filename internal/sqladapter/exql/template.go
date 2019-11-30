@@ -6,8 +6,8 @@ import (
 	"sync"
 	"text/template"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/cache"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/cache"
 )
 
 // Type is the type of SQL query the statement represents.

@@ -22,8 +22,8 @@
 package postgresql
 
 import (
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/sqladapter"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/sqladapter"
 )
 
 // collection is the actual implementation of a collection.

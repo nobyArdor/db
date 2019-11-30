@@ -26,8 +26,8 @@ import (
 	"database/sql"
 	"sync/atomic"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 // DatabaseTx represents a database session within a transaction.

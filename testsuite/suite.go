@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/suite"
-	db "upper.io/db.v3"
-	"upper.io/db.v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 const TimeZone = "Canada/Eastern"

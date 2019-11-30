@@ -34,10 +34,10 @@ import (
 	"strconv"
 	"strings"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/sqladapter/compat"
-	"upper.io/db.v3/internal/sqladapter/exql"
-	"upper.io/db.v3/lib/reflectx"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/sqladapter/compat"
+	"github.com/arumata/db/v3/internal/sqladapter/exql"
+	"github.com/arumata/db/v3/lib/reflectx"
 )
 
 // MapOptions represents options for the mapper.
@@ -89,7 +89,7 @@ var (
 )
 
 var (
-	errDeprecatedJSONBTag = errors.New(`Tag "jsonb" is deprecated. See "PostgreSQL: jsonb tag" at https://github.com/upper/db/releases/tag/v3.4.0`)
+	errDeprecatedJSONBTag = errors.New(`Tag "jsonb" is deprecated. See "PostgreSQL: jsonb tag" at https://github.com/arumata/db/v3/releases/tag/v3.4.0`)
 )
 
 type exprDB interface {

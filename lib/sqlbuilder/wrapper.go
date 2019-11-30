@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"sync"
 
-	db "upper.io/db.v3"
+	"github.com/arumata/db/v3"
 )
 
 var (

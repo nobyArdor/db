@@ -22,9 +22,9 @@
 package mssql
 
 import (
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/sqladapter"
-	"upper.io/db.v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/sqladapter"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 // table is the actual implementation of a collection.

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/sqladapter/exql"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/sqladapter/exql"
 )
 
 var comparisonOperators = map[db.ComparisonOperator]string{

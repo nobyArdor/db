@@ -27,10 +27,10 @@ import (
 	"os"
 	"time"
 
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/sqladapter"
-	"upper.io/db.v3/lib/sqlbuilder"
-	"upper.io/db.v3/testsuite"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/sqladapter"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3/testsuite"
 )
 
 var settings = ConnectionURL{

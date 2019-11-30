@@ -35,11 +35,11 @@ import (
 	"time"
 
 	_ "github.com/lib/pq" // PostgreSQL driver.
-	db "upper.io/db.v3"
-	"upper.io/db.v3/internal/sqladapter"
-	"upper.io/db.v3/internal/sqladapter/compat"
-	"upper.io/db.v3/internal/sqladapter/exql"
-	"upper.io/db.v3/lib/sqlbuilder"
+	"github.com/arumata/db/v3"
+	"github.com/arumata/db/v3/internal/sqladapter"
+	"github.com/arumata/db/v3/internal/sqladapter/compat"
+	"github.com/arumata/db/v3/internal/sqladapter/exql"
+	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 // database is the actual implementation of Database
