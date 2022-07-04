@@ -1,7 +1,7 @@
 package exql
 
 import (
-	"github.com/arumata/db/v3/internal/cache"
+	"github.com/nobyArdor/db/v3/internal/cache"
 )
 
 // Fragment is any interface that can be both cached and compiled.

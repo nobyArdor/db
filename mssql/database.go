@@ -31,12 +31,13 @@ import (
 
 	"database/sql"
 
-	_ "github.com/denisenkom/go-mssqldb" // MSSQL driver
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/internal/sqladapter/compat"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	mssql "github.com/denisenkom/go-mssqldb" // MSSQL driver
+	"github.com/denisenkom/go-mssqldb/msdsn"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/compat"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 // database is the actual implementation of Database
@@ -72,8 +73,26 @@ func (d *database) Open(connURL db.ConnectionURL) error {
 		return db.ErrMissingConnURL
 	}
 	d.connURL = connURL
-	return d.open()
+	return d.open(nil)
 }
+
+// Open attempts to open a connection with the database server.
+func (d *database) OpenWithConfig(connURL db.ConnectionURL, modConfig func(msdsn.Config)) error {
+	if connURL == nil {
+		return db.ErrMissingConnURL
+	}
+	d.connURL = connURL
+	return d.open(modConfig)
+}
+
+// Open attempts to open a connection with the database server.
+/*func (d *database) Open(connURL db.ConnectionURL) error {
+	if connURL == nil {
+		return db.ErrMissingConnURL
+	}
+	d.connURL = connURL
+	return d.open()
+}*/
 
 // NewTx begins a transaction block with the given context.
 func (d *database) NewTx(ctx context.Context) (sqlbuilder.Tx, error) {
@@ -108,8 +127,22 @@ func (d *database) Collections() (collections []string, err error) {
 	return collections, nil
 }
 
+func (d *database) defaultOpenConnection() (*sql.DB, error) {
+	sess, err := sql.Open("mssql", d.ConnectionURL().String())
+	return sess, err
+}
+
+func (d *database) withConfigOpenConnection(modConfig func(msdsn.Config)) (*sql.DB, error) {
+	conStr := d.ConnectionURL().String()
+	cfg, _, err := msdsn.Parse(conStr)
+	modConfig(cfg)
+	conn := mssql.NewConnectorConfig(cfg)
+	sess := sql.OpenDB(conn)
+	return sess, err
+}
+
 // open attempts to establish a connection with the MySQL server.
-func (d *database) open() error {
+func (d *database) open(modConfig func(msdsn.Config)) error {
 	// Binding with sqladapter's logic.
 	d.BaseDatabase = sqladapter.NewBaseDatabase(d)
 
@@ -117,7 +150,13 @@ func (d *database) open() error {
 	d.SQLBuilder = sqlbuilder.WithSession(d.BaseDatabase, template)
 
 	connFn := func() error {
-		sess, err := sql.Open("mssql", d.ConnectionURL().String())
+		var sess *sql.DB
+		var err error
+		if modConfig == nil {
+			sess, err = d.defaultOpenConnection()
+		} else {
+			sess, err = d.withConfigOpenConnection(modConfig)
+		}
 		if err == nil {
 			sess.SetConnMaxLifetime(db.DefaultSettings.ConnMaxLifetime())
 			sess.SetMaxIdleConns(db.DefaultSettings.MaxIdleConns())

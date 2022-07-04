@@ -19,10 +19,10 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-package ql // import "github.com/arumata/db/v3/ql"
+package ql // import "github.com/nobyArdor/db/v3/ql"
 
 import (
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 const sqlDriver = `ql`

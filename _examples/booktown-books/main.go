@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/arumata/db/v3/postgresql"
+	"github.com/nobyArdor/db/v3/postgresql"
 )
 
 var settings = postgresql.ConnectionURL{

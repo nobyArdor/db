@@ -35,11 +35,11 @@ import (
 	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql" // MySQL driver.
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/internal/sqladapter/compat"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/compat"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 // database is the actual implementation of Database

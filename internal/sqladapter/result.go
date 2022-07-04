@@ -25,9 +25,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/immutable"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/immutable"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 type Result struct {

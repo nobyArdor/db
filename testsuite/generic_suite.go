@@ -24,9 +24,9 @@ package testsuite
 import (
 	"time"
 
+	"github.com/nobyArdor/db/v3"
 	"github.com/stretchr/testify/suite"
 	"gopkg.in/mgo.v2/bson"
-	"github.com/arumata/db/v3"
 )
 
 type birthday struct {

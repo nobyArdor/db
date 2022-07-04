@@ -27,7 +27,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/arumata/db/v3"
+	"github.com/nobyArdor/db/v3"
 )
 
 var (

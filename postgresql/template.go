@@ -22,9 +22,9 @@
 package postgresql
 
 import (
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/cache"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/cache"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
 )
 
 const (

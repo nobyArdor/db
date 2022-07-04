@@ -30,9 +30,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/testsuite"
 	"github.com/stretchr/testify/suite"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
-	"github.com/arumata/db/v3/testsuite"
 )
 
 type int64Compat int64

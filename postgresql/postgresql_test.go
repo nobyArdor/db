@@ -32,12 +32,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/testsuite"
 	uuid "github.com/satori/go.uuid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
-	"github.com/arumata/db/v3/testsuite"
 )
 
 type customJSONB struct {
@@ -814,7 +814,7 @@ func (s *AdapterTests) Test_Issue370_InsertUUID() {
 			Name string     `db:"name"`
 		}
 
-		newUUID := uuid.Must(uuid.NewV4())
+		newUUID := uuid.NewV4()
 
 		item1 := itemT{
 			ID:   &newUUID,
@@ -846,7 +846,7 @@ func (s *AdapterTests) Test_Issue370_InsertUUID() {
 		}
 
 		item1 := itemT{
-			ID:   uuid.Must(uuid.NewV4()),
+			ID:   uuid.NewV4(),
 			Name: "Jonny",
 		}
 

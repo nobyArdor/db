@@ -30,11 +30,11 @@ import (
 
 	"encoding/json"
 
+	"github.com/nobyArdor/db/v3"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"github.com/arumata/db/v3"
 
-	"github.com/arumata/db/v3/internal/immutable"
+	"github.com/nobyArdor/db/v3/internal/immutable"
 )
 
 type resultQuery struct {

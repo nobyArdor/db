@@ -9,11 +9,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/cache"
-	"github.com/arumata/db/v3/internal/sqladapter/compat"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/cache"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/compat"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 var (

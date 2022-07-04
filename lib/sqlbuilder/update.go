@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/arumata/db/v3/internal/immutable"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3/internal/immutable"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
 )
 
 type updaterQuery struct {

@@ -3,9 +3,9 @@ package ql
 import (
 	"testing"
 
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 	"github.com/stretchr/testify/assert"
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 func TestTemplateSelect(t *testing.T) {

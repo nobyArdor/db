@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/nobyArdor/db/v3"
 	"github.com/stretchr/testify/assert"
-	"github.com/arumata/db/v3"
 )
 
 func TestSelect(t *testing.T) {

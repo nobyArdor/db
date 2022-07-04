@@ -32,12 +32,12 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/compat"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 	_ "modernc.org/ql/driver" // QL driver
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/internal/sqladapter/compat"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
 )
 
 // database is the actual implementation of Database

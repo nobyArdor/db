@@ -19,15 +19,15 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-package sqlite // import "github.com/arumata/db/v3/sqlite"
+package sqlite // import "github.com/nobyArdor/db/v3"
 
 import (
 	"database/sql"
 
-	"github.com/arumata/db/v3"
+	"github.com/nobyArdor/db/v3"
 
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 const sqlDriver = `sqlite`

@@ -28,7 +28,7 @@ import (
 	"reflect"
 
 	"github.com/lib/pq"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 // Array returns a sqlbuilder.ScannerValuer for any given slice. Slice elements

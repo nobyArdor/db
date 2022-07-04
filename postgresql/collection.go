@@ -22,8 +22,8 @@
 package postgresql
 
 import (
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
 )
 
 // collection is the actual implementation of a collection.

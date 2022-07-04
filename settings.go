@@ -175,6 +175,7 @@ func (c *settings) MaxOpenConns() int {
 // settings.
 func NewSettings() Settings {
 	newSettings := *(DefaultSettings.(*settings))
+
 	return &newSettings
 }
 

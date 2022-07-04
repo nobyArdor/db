@@ -27,7 +27,7 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 // JSON represents a MySQL's JSON value:

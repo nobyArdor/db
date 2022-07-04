@@ -27,10 +27,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
-	"github.com/arumata/db/v3/testsuite"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3/testsuite"
 )
 
 var settings = ConnectionURL{

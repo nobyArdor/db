@@ -24,7 +24,7 @@ package sqlbuilder
 import (
 	"database/sql"
 
-	"github.com/arumata/db/v3"
+	"github.com/nobyArdor/db/v3"
 )
 
 type scanner struct {

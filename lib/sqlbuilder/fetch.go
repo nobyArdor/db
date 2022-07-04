@@ -24,8 +24,8 @@ package sqlbuilder
 import (
 	"reflect"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/lib/reflectx"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/lib/reflectx"
 )
 
 type hasConvertValues interface {

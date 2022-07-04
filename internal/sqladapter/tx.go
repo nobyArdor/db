@@ -26,8 +26,8 @@ import (
 	"database/sql"
 	"sync/atomic"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 // DatabaseTx represents a database session within a transaction.

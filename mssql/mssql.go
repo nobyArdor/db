@@ -24,9 +24,9 @@ package mssql // import "github.com/arumata/db/v3/mssql"
 import (
 	"database/sql"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 const sqlDriver = `mssql`

@@ -3,8 +3,8 @@ package sqlbuilder
 import (
 	"testing"
 
+	"github.com/nobyArdor/db/v3"
 	"github.com/stretchr/testify/assert"
-	"github.com/arumata/db/v3"
 )
 
 func TestPlaceholderSimple(t *testing.T) {

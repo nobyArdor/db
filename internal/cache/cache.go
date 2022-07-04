@@ -28,7 +28,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/arumata/db/v3/internal/cache/hashstructure"
+	"github.com/nobyArdor/db/v3/internal/cache/hashstructure"
 )
 
 const defaultCapacity = 128

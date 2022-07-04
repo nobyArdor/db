@@ -30,10 +30,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/testsuite"
 	"github.com/stretchr/testify/suite"
 	"gopkg.in/mgo.v2/bson"
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/testsuite"
 )
 
 type artistType struct {

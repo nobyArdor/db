@@ -71,4 +71,4 @@
 //
 // See more usage examples and documentation for users at
 // https://upper.io/db.v3.
-package db // import "github.com/arumata/db/v3/v3"
+package db // import "github.com/nobyArdor/db/v3"

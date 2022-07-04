@@ -29,8 +29,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/nobyArdor/db/v3"
 	mgo "gopkg.in/mgo.v2"
-	"github.com/arumata/db/v3"
 )
 
 // Adapter holds the name of the mongodb adapter.

@@ -33,11 +33,11 @@ import (
 	"sync/atomic"
 
 	_ "github.com/mattn/go-sqlite3" // SQLite3 driver.
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/sqladapter"
-	"github.com/arumata/db/v3/internal/sqladapter/compat"
-	"github.com/arumata/db/v3/internal/sqladapter/exql"
-	"github.com/arumata/db/v3/lib/sqlbuilder"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/sqladapter"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/compat"
+	"github.com/nobyArdor/db/v3/internal/sqladapter/exql"
+	"github.com/nobyArdor/db/v3/lib/sqlbuilder"
 )
 
 // database is the actual implementation of Database

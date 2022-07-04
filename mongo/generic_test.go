@@ -24,8 +24,8 @@ package mongo
 import (
 	"testing"
 
+	"github.com/nobyArdor/db/v3/testsuite"
 	"github.com/stretchr/testify/suite"
-	"github.com/arumata/db/v3/testsuite"
 )
 
 type GenericTests struct {

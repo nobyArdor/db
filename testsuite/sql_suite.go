@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/nobyArdor/db/v3"
 	"github.com/stretchr/testify/suite"
-	"github.com/arumata/db/v3"
 )
 
 type customLogger struct {

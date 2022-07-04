@@ -6,8 +6,8 @@ import (
 	"sync"
 	"text/template"
 
-	"github.com/arumata/db/v3"
-	"github.com/arumata/db/v3/internal/cache"
+	"github.com/nobyArdor/db/v3"
+	"github.com/nobyArdor/db/v3/internal/cache"
 )
 
 // Type is the type of SQL query the statement represents.
